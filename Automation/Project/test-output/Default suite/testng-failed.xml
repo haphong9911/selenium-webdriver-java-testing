@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="webdriver.Topic_16_Handle_Upload_File">
+      <class name="listeners.Register">
         <methods>
           <include name="beforeClass"/>
+          <include name="Register_01"/>
           <include name="afterClass"/>
-          <include name="TC_01_One_File"/>
         </methods>
-      </class> <!-- webdriver.Topic_16_Handle_Upload_File -->
+      </class> <!-- listeners.Register -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

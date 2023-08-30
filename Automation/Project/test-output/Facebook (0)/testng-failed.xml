@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Facebook (0)]">
+  <parameter name="server" value="LIVE"/>
+  <test thread-count="5" name="Run on CHROME browser(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testng.Topic_05_Multiple_Browser">
+        <methods>
+          <include name="TC_01_Login_To_System"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- testng.Topic_05_Multiple_Browser -->
+    </classes>
+  </test> <!-- Run on CHROME browser(failed) -->
+  <test thread-count="5" name="Run on FIREFOX browser(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testng.Topic_05_Multiple_Browser">
+        <methods>
+          <include name="TC_01_Login_To_System"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- testng.Topic_05_Multiple_Browser -->
+    </classes>
+  </test> <!-- Run on FIREFOX browser(failed) -->
+  <test thread-count="5" name="Run on EDGE browser(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="testng.Topic_05_Multiple_Browser">
+        <methods>
+          <include name="TC_01_Login_To_System"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- testng.Topic_05_Multiple_Browser -->
+    </classes>
+  </test> <!-- Run on EDGE browser(failed) -->
+</suite> <!-- Failed suite [Facebook (0)] -->

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [Facebook]" guice-stage="DEVELOPMENT">
+  <test thread-count="4" parallel="tests" name="First test(failed)">
+    <classes>
+      <class name="parallel.Topic_01_First_Class">
+        <methods>
+          <include name="Register_02"/>
+          <include name="afterClass"/>
+          <include name="Register_01"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- parallel.Topic_01_First_Class -->
+      <class name="parallel.Topic_02_Second_Class">
+        <methods>
+          <include name="Login_02"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="Login_01"/>
+        </methods>
+      </class> <!-- parallel.Topic_02_Second_Class -->
+    </classes>
+  </test> <!-- First test(failed) -->
+  <test thread-count="4" parallel="tests" name="Second test(failed)">
+    <classes>
+      <class name="parallel.Topic_04_Four_Class">
+        <methods>
+          <include name="User_02"/>
+          <include name="User_01"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- parallel.Topic_04_Four_Class -->
+      <class name="parallel.Topic_03_Third_Class">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="Payment_02"/>
+          <include name="Payment_01"/>
+        </methods>
+      </class> <!-- parallel.Topic_03_Third_Class -->
+    </classes>
+  </test> <!-- Second test(failed) -->
+</suite> <!-- Failed suite [Facebook] -->
