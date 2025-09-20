@@ -1,22 +1,14 @@
 package loop;
 
+import java.time.Duration;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.beust.jcommander.Parameter;
 
 public class Loop {
 	WebDriver driver;
@@ -32,7 +24,8 @@ public class Loop {
 	public void beforeMethod() {
 		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+
 		loginPageUrl = "https://demo.guru99.com/v4/";
 		email = "haphong" + getRandomNumber() + "@gmail.com";
 		driver.get(loginPageUrl);
@@ -48,7 +41,7 @@ public class Loop {
 
 		userID = driver.findElement(By.xpath("//td[text()='User ID :']/following-sibling::td")).getText();
 		userPassword = driver.findElement(By.xpath("//td[text()='Password :']/following-sibling::td")).getText();
-		
+
 		System.out.println(userID);
 		System.out.println(userPassword);
 	}

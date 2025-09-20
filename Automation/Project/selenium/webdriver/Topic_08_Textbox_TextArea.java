@@ -1,6 +1,6 @@
 package webdriver;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,13 +19,14 @@ public class Topic_08_Textbox_TextArea {
 	public void beforeClass() {
 		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver.exe");
 		driver = new FirefoxDriver();
-		
-		firstName="Luis"; 
-		lastName="Suarez"; 
-		editFirstName="Steven"; 
-		editLastName="Gerrard";
-		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		firstName = "Luis";
+		lastName = "Suarez";
+		editFirstName = "Steven";
+		editLastName = "Gerrard";
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		;
 		driver.manage().window().maximize();
 	}
 
@@ -57,7 +58,7 @@ public class Topic_08_Textbox_TextArea {
 		// Click save
 		driver.findElement(By.id("btnSave")).click();
 		sleepInSecond(3);
-		
+
 		By firstNameTextBoxBy = By.id("personal_txtEmpFirstName");
 		By lastNameTextBoxBy = By.id("personal_txtEmpFirstName");
 		By employeeIDTextBoxBy = By.id("personal_txtEmpFirstName");
@@ -91,22 +92,22 @@ public class Topic_08_Textbox_TextArea {
 		// Verify field firstname,lastname,id,text box value matching with input value
 		Assert.assertEquals(driver.findElement(firstNameTextBoxBy).getAttribute("value"), editFirstName);
 		Assert.assertEquals(driver.findElement(lastNameTextBoxBy).getAttribute("value"), editLastName);
-		
-		//Click to 'Imigration' tab
+
+		// Click to 'Imigration' tab
 		driver.findElement(By.xpath("//a[@text='Immigration']")).click();
 		driver.findElement(By.cssSelector("input#btnAdd")).click();
-		
-		//Input to immgration number textbox
+
+		// Input to immgration number textbox
 		driver.findElement(By.id("immigration_number")).sendKeys("123-456-789");
 		driver.findElement(By.cssSelector("textarea#immigration_comments")).sendKeys("Steven's\nGerrard\nPassport\nID");
 		sleepInSecond(5);
-		
+
 		driver.findElement(By.id("btnSave")).click();
 		sleepInSecond(5);
-		
+
 		driver.findElement(By.xpath("//td[@class='document']/a[@text='Passport']")).click();
-		
-		//verify
+
+		// verify
 		Assert.assertEquals(driver.findElement(By.id("immigration_number")).getAttribute("value"), "123-456-789");
 	}
 

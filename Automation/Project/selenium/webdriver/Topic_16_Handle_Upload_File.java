@@ -1,9 +1,8 @@
 package webdriver;
 
 import java.io.File;
-import java.util.Iterator;
+import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,100 +17,112 @@ public class Topic_16_Handle_Upload_File {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	String tranhFileName = "Tranh.png";
-	String numberFileName= "Number.png";
+	String numberFileName = "Number.png";
 	String treFileName = "Tre.png";
-	
-	//Window
-	String uploadFileFolderPath = projectPath + File.separator +  "uploadFile" + File.separator;
+
+	// Window
+	String uploadFileFolderPath = projectPath + File.separator + "uploadFile" + File.separator;
 	String tranhFilePath = uploadFileFolderPath + tranhFileName;
 	String numberFilePath = uploadFileFolderPath + numberFileName;
 	String treFilePath = uploadFileFolderPath + treFileName;
-	
+
 	@BeforeClass
 	public void beforeClass() {
 		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		;
 
 	}
 
 	@Test
 	public void TC_01_One_File() {
 		driver.get("https://blueimp.github.io/jQuery-File-Upload/");
-		
+
 //		//Cach 1 - khong nen dung
 //		WebElement uploadFile = driver.findElement(By.xpath("//input[@type='file']"));
 //		uploadFile.sendKeys(tranhFilePath);
 //		uploadFile.sendKeys(treFilePath);
 //		uploadFile.sendKeys(numberFilePath);
 //		
-		
+
 		By uploadFileBy = By.xpath("//input[@type='file']");
-		//Cach 2 
-		//Selenium sendkeys method
-		
-		//Load file
+		// Cach 2
+		// Selenium sendkeys method
+
+		// Load file
 		driver.findElement(uploadFileBy).sendKeys(tranhFilePath);
 		sleepInSecond(3);
-		
+
 		driver.findElement(uploadFileBy).sendKeys(treFilePath);
 		sleepInSecond(3);
-		
+
 		driver.findElement(uploadFileBy).sendKeys(numberFilePath);
 		sleepInSecond(3);
-		
-		//Verify viec load file len success
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + numberFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + treFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + tranhFileName + "']")).isDisplayed());
 
-		//Click to upload at each file
+		// Verify viec load file len success
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name' and text()='" + numberFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name' and text()='" + treFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name' and text()='" + tranhFileName + "']")).isDisplayed());
+
+		// Click to upload at each file
 		List<WebElement> uploadButton = driver.findElements(By.cssSelector("table button.start"));
-		for(WebElement button : uploadButton) {
+		for (WebElement button : uploadButton) {
 			button.click();
 			sleepInSecond(3);
 		}
-		
-		//Verify //p[@class='name']//a[@title='Quat.jpg']
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[@title='" + numberFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[@title='" + treFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[@title='" + tranhFileName + "']")).isDisplayed());
 
+		// Verify //p[@class='name']//a[@title='Quat.jpg']
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name']/a[@title='" + numberFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name']/a[@title='" + treFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name']/a[@title='" + tranhFileName + "']")).isDisplayed());
 
 	}
 
 	@Test
 	public void TC_02_Multiple_File() {
 		driver.get("https://blueimp.github.io/jQuery-File-Upload/");
-		
+
 		By uploadFileBy = By.xpath("//input[@type='file']");
 
-		driver.findElement(uploadFileBy).sendKeys(tranhFilePath+ "\n" + treFilePath + "\n" + numberFilePath);
+		driver.findElement(uploadFileBy).sendKeys(tranhFilePath + "\n" + treFilePath + "\n" + numberFilePath);
 		sleepInSecond(3);
-		
-		//Verify viec load file len success
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + numberFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + treFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name' and text()='" + tranhFileName + "']")).isDisplayed());
-		
-		//Click to upload at each file
+
+		// Verify viec load file len success
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name' and text()='" + numberFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name' and text()='" + treFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name' and text()='" + tranhFileName + "']")).isDisplayed());
+
+		// Click to upload at each file
 		List<WebElement> uploadButton = driver.findElements(By.cssSelector("table button.start"));
-		for(WebElement button : uploadButton) {
+		for (WebElement button : uploadButton) {
 			button.click();
 			sleepInSecond(3);
 		}
-		
-		//Verify //p[@class='name']//a[@title='Quat.jpg']
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[@title='" + numberFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[@title='" + treFileName + "']")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//p[@class='name']/a[@title='" + tranhFileName + "']")).isDisplayed());
 
-	
+		// Verify //p[@class='name']//a[@title='Quat.jpg']
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name']/a[@title='" + numberFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name']/a[@title='" + treFileName + "']")).isDisplayed());
+		Assert.assertTrue(
+				driver.findElement(By.xpath("//p[@class='name']/a[@title='" + tranhFileName + "']")).isDisplayed());
+
 	}
+
 	public void TC_03() {
-		
+
 	}
-	
+
 	public void sleepInSecond(long Second) {
 		try {
 			Thread.sleep(5000);

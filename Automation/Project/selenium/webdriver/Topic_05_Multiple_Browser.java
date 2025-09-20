@@ -13,43 +13,43 @@ public class Topic_05_Multiple_Browser {
 
 	@Test
 	public void TC_01_Chrome() {
-		//Setting OS hiểu được cái gecko driver => Giao tiếp với browser
+		// Setting OS hiểu được cái gecko driver => Giao tiếp với browser
 		System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
 		driver = new ChromeDriver();
-		
+
 		driver.get("https://www.facebook.com/");
-		
+
 		driver.quit();
-	
+
 	}
 
 	@Test
 	public void TC_02_Firefox() {
-		//Setting OS hiểu được cái gecko driver => Giao tiếp với browser
+		// Setting OS hiểu được cái gecko driver => Giao tiếp với browser
 		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		
+
 		driver.get("https://www.facebook.com/");
-		
+
 		driver.quit();
 
 	}
-	
+
 	@Test
 	public void TC_03_Edge() {
-		//Setting OS hiểu được cái gecko driver => Giao tiếp với browser
+		// Setting OS hiểu được cái gecko driver => Giao tiếp với browser
 		System.setProperty("webdriver.edge.driver", projectPath + "\\browserDrivers\\msedgedriver.exe");
 		driver = new EdgeDriver();
-		
+
 		driver.get("https://www.facebook.com/");
-		
+
 		driver.quit();
-	
+
 	}
-	
+
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}
-	
+
 }

@@ -1,6 +1,6 @@
 package webdriver;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,24 +16,24 @@ public class Topic_00_Template {
 	public void beforeClass() {
 		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
 
 	@Test
 	public void TC_01() {
-		
+
 	}
 
 	@Test
 	public void TC_02() {
-	
+
 	}
 
 	public void TC_03() {
-		
+
 	}
-	
+
 	public void sleepInSecond(long Second) {
 		try {
 			Thread.sleep(5000);

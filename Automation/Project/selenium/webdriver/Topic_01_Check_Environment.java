@@ -1,6 +1,6 @@
 package webdriver;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,8 @@ public class Topic_01_Check_Environment {
 	public void beforeClass() {
 		System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		;
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/");
 	}

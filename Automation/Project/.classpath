@@ -7,8 +7,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="libraries/selenium-server-standalone-3.141.59.jar" sourcepath="libraries/client-combined-3.141.59-sources.jar"/>
 	<classpathentry kind="lib" path="libraries/testng-6.14.3.jar" sourcepath="libraries/testng-6.14.3-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/tran.ha.phong/Downloads/Automation/eclipse-java-2022-06-R-win32-x86_64/eclipse/plugins/commons-io-2.13.0.jar"/>
+	<classpathentry kind="lib" path="libraries/commons-io-2.20.0.jar"/>
+	<classpathentry kind="lib" path="libraries/selenium-server-4.35.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

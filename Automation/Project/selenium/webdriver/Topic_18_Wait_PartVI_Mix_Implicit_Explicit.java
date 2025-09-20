@@ -1,6 +1,6 @@
 package webdriver;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,90 +25,70 @@ public class Topic_18_Wait_PartVI_Mix_Implicit_Explicit {
 	@Test
 	public void TC_01_Element_Found() {
 		driver.get("https://www.facebook.com/");
-		
+
 		By emailIdBy = By.id("email");
-		
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		;
+
 		driver.findElement(emailIdBy).isDisplayed();
-		
-		explicitWait = new WebDriverWait(driver,15);
+
+		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(emailIdBy));
 	}
 
 	@Test
 	public void TC_02_Element_Not_Found_Only_Implicit() {
 		driver.get("https://www.facebook.com/");
-		
+
 		By emailIdBy = By.id("email");
-		
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		;
+
 		driver.findElement(emailIdBy).isDisplayed();
-		
-		explicitWait = new WebDriverWait(driver,15);
+
+		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(emailIdBy));
 	}
-	
+
 	@Test
 	public void TC_03_Only_Explicit() {
 		driver.get("https://www.facebook.com/");
-		
+
 		By emailIdBy = By.id("email");
-		
-		explicitWait = new WebDriverWait(driver,15);
+
+		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.visibilityOfElementLocated(emailIdBy));
 	}
-	
-	
+
 	@Test
 	public void TC_04_Element_Not_Found() {
 		driver.get("https://www.facebook.com/");
-		
-		//1 - Implicit < Explicit
-		//2 - Implicit = Explicit
-		//3 - Implicit > Explicit
+
+		// 1 - Implicit < Explicit
+		// 2 - Implicit = Explicit
+		// 3 - Implicit > Explicit
 		By emailIdBy = By.id("email");
-		
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		try {
 			driver.findElement(emailIdBy).isDisplayed();
 		} catch (Exception e) {
-			
+
 		}
-		
-		explicitWait = new WebDriverWait(driver,10);
+
+		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		try {
 			explicitWait.until(ExpectedConditions.visibilityOfElementLocated(emailIdBy));
 		} catch (Exception e) {
-			
+
 		}
-		
+
 	}
-	
+
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

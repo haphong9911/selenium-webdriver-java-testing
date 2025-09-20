@@ -1,57 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-19T14:42:34Z" name="Default suite" finished-at="2023-07-19T14:42:58Z" duration-ms="24817">
+  <suite started-at="2025-09-20T14:11:37Z" name="Default suite" finished-at="2025-09-20T14:11:37Z" duration-ms="64">
     <groups>
     </groups>
-    <test started-at="2023-07-19T14:42:34Z" name="Default test" finished-at="2023-07-19T14:42:58Z" duration-ms="24817">
-      <class name="listeners.Register">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:listeners.Register@5026735c]" started-at="2023-07-19T14:42:34Z" name="beforeClass" finished-at="2023-07-19T14:42:38Z" duration-ms="4303" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="Register_01()[pri:0, instance:listeners.Register@5026735c]" started-at="2023-07-19T14:42:38Z" name="Register_01" finished-at="2023-07-19T14:42:57Z" duration-ms="19125" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+    <test started-at="2025-09-20T14:11:37Z" name="Default test" finished-at="2025-09-20T14:11:37Z" duration-ms="64">
+      <class name="webdriver.Topic_05_Multiple_Browser">
+        <test-method signature="TC_01_Chrome()[pri:0, instance:webdriver.Topic_05_Multiple_Browser@563f38c4]" started-at="2025-09-20T14:11:37Z" name="TC_01_Chrome" finished-at="2025-09-20T14:11:37Z" duration-ms="41" status="FAIL">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
             <message>
-              <![CDATA[Unable to locate element: //*[@id='email']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'B122754-LT1', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230710165010, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18108, moz:profile: C:\Users\TRANHA~1.PHO\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: face02d3-e401-46b7-a029-5a08f5dc8510
-*** Element info: {Using=xpath, value=//*[@id='email']}]]>
+              <![CDATA[Unable to obtain: chromedriver, error chromedriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\chromedriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.0', java.version: '21.0.8'
+Driver info: driver.version: ChromeDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id='email']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
-System info: host: 'B122754-LT1', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230710165010, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 18108, moz:profile: C:\Users\TRANHA~1.PHO\AppDa..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: face02d3-e401-46b7-a029-5a08f5dc8510
-*** Element info: {Using=xpath, value=//*[@id='email']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at listeners.Register.Register_01(Register.java:38)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\chromedriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.0', java.version: '21.0.8'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+at webdriver.Topic_05_Multiple_Browser.TC_01_Chrome(Topic_05_Multiple_Browser.java:18)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
@@ -71,19 +50,169 @@ at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.IllegalStateException: chromedriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\chromedriver.exe
+at org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:370)
+at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+... 29 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Register_01 -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:listeners.Register@5026735c]" started-at="2023-07-19T14:42:57Z" name="afterClass" finished-at="2023-07-19T14:42:58Z" duration-ms="1347" status="PASS">
+        </test-method> <!-- TC_01_Chrome -->
+        <test-method signature="TC_02_Firefox()[pri:0, instance:webdriver.Topic_05_Multiple_Browser@563f38c4]" started-at="2025-09-20T14:11:37Z" name="TC_02_Firefox" finished-at="2025-09-20T14:11:37Z" duration-ms="4" status="FAIL">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[Unable to obtain: geckodriver, error geckodriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\geckodriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.0', java.version: '21.0.8'
+Driver info: driver.version: FirefoxDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: geckodriver, error geckodriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\geckodriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.0', java.version: '21.0.8'
+Driver info: driver.version: FirefoxDriver
+at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+at org.openqa.selenium.firefox.FirefoxDriver.generateExecutor(FirefoxDriver.java:123)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:114)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:109)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:94)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:84)
+at webdriver.Topic_05_Multiple_Browser.TC_02_Firefox(Topic_05_Multiple_Browser.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.IllegalStateException: geckodriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\geckodriver.exe
+at org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:370)
+at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02_Firefox -->
+        <test-method signature="TC_03_Edge()[pri:0, instance:webdriver.Topic_05_Multiple_Browser@563f38c4]" started-at="2025-09-20T14:11:37Z" name="TC_03_Edge" finished-at="2025-09-20T14:11:37Z" duration-ms="2" status="FAIL">
+          <exception class="org.openqa.selenium.remote.NoSuchDriverException">
+            <message>
+              <![CDATA[Unable to obtain: msedgedriver, error msedgedriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\msedgedriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.0', java.version: '21.0.8'
+Driver info: driver.version: EdgeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: msedgedriver, error msedgedriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\msedgedriver.exe
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '26.0', java.version: '21.0.8'
+Driver info: driver.version: EdgeDriver
+at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:124)
+at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+at org.openqa.selenium.edge.EdgeDriver.generateExecutor(EdgeDriver.java:71)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:60)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:56)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:48)
+at org.openqa.selenium.edge.EdgeDriver.<init>(EdgeDriver.java:44)
+at webdriver.Topic_05_Multiple_Browser.TC_03_Edge(Topic_05_Multiple_Browser.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.IllegalStateException: msedgedriver must exist: /Users/tran.ha.phong/git/selenium-webdriver-java-testing/Automation/Project\browserDrivers\msedgedriver.exe
+at org.openqa.selenium.internal.Require$PathStateChecker.isExecutable(Require.java:370)
+at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.NoSuchDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03_Edge -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:webdriver.Topic_05_Multiple_Browser@563f38c4]" started-at="2025-09-20T14:11:37Z" name="afterClass" finished-at="2025-09-20T14:11:37Z" duration-ms="1" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
+at webdriver.Topic_05_Multiple_Browser.afterClass(Topic_05_Multiple_Browser.java:50)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:214)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- listeners.Register -->
+      </class> <!-- webdriver.Topic_05_Multiple_Browser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
